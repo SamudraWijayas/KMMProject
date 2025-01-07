@@ -1,0 +1,236 @@
+# create user
+POST http://localhost:5000/register
+Content-Type: application/json
+
+{
+    "username": "asw",
+    "password": "12345",
+    "confPassword": "12345",
+    "role": "admin"
+}
+###
+# get
+GET http://localhost:5000/generus/kelompok/cf66d7e7-9e29-40af-84e8-1544e3eb4395
+###
+# get
+GET http://localhost:5000/totalUsers
+
+###
+# get
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "12345"
+}
+###
+
+GET http://localhost:5000/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJhdmF0YXIiOiIvdXBsb2Fkcy9wcm9maWwvMTcxODAxMzIyODY4MS1XaGF0c0FwcCBJbWFnZSAyMDI0LTA2LTA4IGF0IDE5LjA5LjAzXzIwNDhmNmNkLmpwZyIsImlkX2Rlc2EiOm51bGwsImlkX2tlbG9tcG9rIjpudWxsLCJpYXQiOjE3MzYwODYyMTEsImV4cCI6MTczNjE3MjYxMX0.3VnlLBvt-QFk-nMKk2--z2wyVmyaLCEwX40agKTmBQ0
+//login user
+###
+PUT http://localhost:5000/users/1
+Content-Type: application/json
+{
+    
+  "username": "new_username"
+}
+###
+//get single
+GET http://localhost:5000/kelompok/total/7a9d2d5d-47fc-49f1-9316-08c1aa719806
+###
+//update user
+POST http://localhost:5000/desa
+Content-Type: application/json
+
+{
+    "desa": "Tanjung Karang 5"
+}
+###
+//update user
+POST http://localhost:5000/generus
+Content-Type: application/json
+
+{
+    "nama": "rrr",
+    "id_kelompok": "cb0504ee-f08c-4483-a876-62024a4f28f5",
+    "id_desa": "181046cc-c72d-487d-a4cc-6f56e98e04a5",
+    "jenjang": "7",
+    "tgl_lahir": "2001/04/23",
+    "jenis_kelamin": "L",
+    "gol_darah": "0",
+    "nama_ortu": "Muslimin"
+
+}
+###
+//update user
+POST http://localhost:5000/kelompok
+Content-Type: application/json
+
+{
+    "kelompok": "Tanjung Seneng 1",
+    "id_desa": "181046cc-c72d-487d-a4cc-6f56e98e04a5"
+}
+
+###
+//delete
+DELETE http://localhost:5000/logout
+
+
+###
+
+###
+DELETE http://localhost:5000/logout
+
+
+###
+
+
+###
+//login admin
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "111"
+}
+
+###
+# get artikel
+GET http://localhost:5000/resep
+
+###
+//get single
+PUT http://localhost:5000/generus
+Content-Type: application/json
+
+{
+  "nama": "Jancok",
+  "id_kelompok": "f44de5ad-e47c-4e6a-9340-868619095cd4",
+  "id_desa": "181046cc-c72d-487d-a4cc-6f56e98e04a5",
+  "jenjang": "11",
+  "tgl_lahir": "2001-12-03",
+  "jenis_kelamin": "P",
+  "gol_darah": "B",
+  "nama_ortu": "Ter",
+  "gambar": "sfsd"
+}
+
+
+
+###
+# gposr artikel
+POST http://localhost:5000/artikel
+Content-Type: application/json
+
+{
+    "judul": "sama ajaa",
+    "content": "deskripsi",
+    "gambar": "qqq.png"
+}
+
+###
+# update
+PATCH  http://localhost:5000/artikel/4
+Content-Type: application/json
+
+{
+    "judul": "mie godog",
+    "content": "deskripsi",
+    "gambar": "qqq.png"
+}
+
+###
+# delete artikel
+DELETE  http://localhost:5000/artikel/3
+
+###
+//register
+POST http://localhost:5000/register
+Content-Type: application/json
+
+{
+    "name": "jancok",
+    "email": "sue@gmail.com",
+    "password": "12345",
+    "confPassword": "12345"
+}
+
+###
+# post resep
+POST http://localhost:5000/resep
+Content-Type: application/json
+
+{
+    "judul": "sama ajaa",
+    "bahan": "deskripsi",
+    "langkah": "fef",
+    "linkVideo": "ferfer",
+    "gambar": "qqq.png",
+    "kategoriId" : "2"
+}
+
+###
+# pw
+PUT http://localhost:5000/users/2/update-data
+Content-Type: application/json
+
+{
+    "oldPassword": "samaee ajaa",
+    "password": "deskripsi",
+    "confPassword": "fef"
+}
+
+###
+# post resep
+POST http://localhost:5000/favorite/2/2
+
+Content-Type: application/json
+###
+# post resep
+POST http://localhost:5000/kategori
+Content-Type: application/json
+
+{
+    "kategori": "Ramadhan"
+}
+
+###
+//get single
+GET http://localhost:5000/contacts/5
+
+###
+//update user
+PUT http://localhost:5000/kategori/3
+Content-Type: application/json
+
+{
+    "kategori": "Tiktok"
+}
+
+###
+# delete artikel
+DELETE  http://localhost:5000/kategori/6
+
+###
+# post resep
+POST http://localhost:5000/comments
+Content-Type: application/json
+
+{
+    "komentar": "Ramadhan"
+}
+###
+# post resep
+POST http://localhost:5000/contacts
+Content-Type: application/json
+
+{
+    "email": "Ramadhan@gmail.com",
+    "phone": "1",
+    "subject": "1",
+    "message": "1",
+    "userId": "1"
+}
