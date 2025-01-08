@@ -32,10 +32,7 @@ const upload = multer({ storage: storage });
 
 
 app.use(cookieParser());
-app.use(cors({
-  origin: 'http://localhost:5173', // Atur origin frontend Anda di sini
-  credentials: true
-}));
+app.use(cors());
 app.use(express.json());
 app.use("/uploads", express.static(path.join(process.cwd(), "uploads"))); // Menyajikan folder uploads secara statis
 app.use(router);
