@@ -19,18 +19,18 @@ import upload from "../middleware/UploadGenerus.js";
 const router = express.Router();
 
 // Routes untuk generus
-router.get("/generus", getAllGenerus); // Mendapatkan semua generus
-router.get("/generus/kelompok/:id_kelompok", getGenerusByKelompok);
-router.get("/generus/desa/:id_desa", getGenerusByDesa);
-router.get("/generus/:id",  getGenerusById); // Mendapatkan generus berdasarkan id
-router.post("/generus", upload.single("gambar"), createGenerus); // Membuat generus baru
+router.get("/api/generus", getAllGenerus); // Mendapatkan semua generus
+router.get("/api/generus/kelompok/:id_kelompok", getGenerusByKelompok);
+router.get("/api/generus/desa/:id_desa", getGenerusByDesa);
+router.get("/api/generus/:id",  getGenerusById); // Mendapatkan generus berdasarkan id
+router.post("/api/generus", upload.single("gambar"), createGenerus); // Membuat generus baru
 
-router.put("/generus/:id", upload.single("gambar"),updateGenerus); // Mengupdate generus berdasarkan id
-router.delete("/generus/:id", deleteGenerus); // Menghapus generus berdasarkan id
-router.get("/totalGenerus", getTotalGenerus); // Endpoint untuk mendapatkan total generus
-router.get("/totalmumi", getTotalGenerusByJenjang); // Endpoint untuk mendapatkan total generus
-router.get("/generus/total/:id_desa", getTotalGenerusByDesa);
-router.get("/generus/total/jenjang/:id_desa", getTotalGenerusByJenjangDesa);
-router.get("/generus/total/caberawit/:id_desa", getTotalCaberawit);
+router.put("/api/generus/:id", upload.single("gambar"),updateGenerus); // Mengupdate generus berdasarkan id
+router.delete("/api/generus/:id", deleteGenerus); // Menghapus generus berdasarkan id
+router.get("/api/totalGenerus", getTotalGenerus); // Endpoint untuk mendapatkan total generus
+router.get("/api/totalmumi", getTotalGenerusByJenjang); // Endpoint untuk mendapatkan total generus
+router.get("/api/generus/total/:id_desa", getTotalGenerusByDesa);
+router.get("/api/generus/total/jenjang/:id_desa", getTotalGenerusByJenjangDesa);
+router.get("/api/generus/total/caberawit/:id_desa", getTotalCaberawit);
 
 export default router;

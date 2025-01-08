@@ -8,15 +8,15 @@ import upload from "../middleware/UploadAvatar.js";
 
 const router = express.Router();
 
-router.get("/users", getUsers); // GET all users
-router.post("/login", Login);
-router.get("/me", verifyUser, getMe);
-router.post("/register", Register);
-router.get("/token", refreshToken);
-router.delete("/logout", Logout);
-router.get("/totalUsers", getTotalUsers);
-router.put("/update", upload.single('avatar'), verifyUser, updateUser); // Route untuk update username dan avatar
-router.put("/update-password", verifyUser, updatePassword); // Route untuk update password
+router.get("/api/users", getUsers); // GET all users
+router.post("/api/login", Login);
+router.get("/api/me", verifyUser, getMe);
+router.post("/api/register", Register);
+router.get("/api/token", refreshToken);
+router.delete("/api/logout", Logout);
+router.get("/api/totalUsers", getTotalUsers);
+router.put("/api/update", upload.single('avatar'), verifyUser, updateUser); // Route untuk update username dan avatar
+router.put("/api/update-password", verifyUser, updatePassword); // Route untuk update password
 
 // router.post('/login', login);
 
